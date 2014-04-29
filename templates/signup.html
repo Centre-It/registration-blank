@@ -1,0 +1,260 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+.col-lg-8 {
+    width: 600px;
+}
+
+.col-lg-4 {
+width: 360px;
+}
+
+.m-n {
+    width: 1000px;
+}
+
+.registration-panel{
+    background-color: #f2f2f2;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0px 3px 5px #b5b5b5;
+}
+
+.status-img{
+    width: 10%;
+    height: 16px;
+    float: right;
+    background-image: url('{{ url_for('static', filename="images/O.png") }}');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 8px;
+}
+
+input#experience {
+    width: 29%;
+    margin-left: 4%;
+    float: right;
+}
+
+input#position {
+    width: 55%;
+}
+
+button.btn.btn-info {
+width: 100%;
+height: 38px;
+background-color: #0071bc;
+border-color: #2e3192;
+}
+
+.tab-bg{
+
+}
+
+li.active{
+    background-color: #0071bc;
+}
+
+.panel-heading .nav-tabs > li.active > a,
+.panel-heading .nav-tabs > li.active > a:hover,
+.panel-heading .nav-tabs > li.active > a:focus {
+  color: white;
+  font-weight: 800;
+  background: transparent;
+}
+
+.panel-tab-radius{
+    border-radius: 10px 10px 0px 0px;
+}
+
+</style>
+
+    {% macro check_on_error(field) -%}
+        {% if field in form.errors %}
+        has-error
+        {% else %}
+
+        {% endif %}
+    {% endmacro %}
+
+    <div style="width: 100%; padding-top: 15px;">
+        <div style="width:200px; float: left; padding-left: 10px;" >
+            <img src="{{ url_for('static', filename="images/cit_logo.png") }}"/>
+        </div>
+
+         <div style="width:540px; float: left; text-align: center;">
+            <p></p>
+        </div>
+
+         <div style="width:200px; float: left; text-align: right; margin-right: 50px; font-size: 16px; line-height: 24px; font-weight: 800;">
+             <span style="color: #39b54a;">Возникли вопросы?</span><br/>
+             Симакова Ирина<br/>
+             +7 (000) 000 00 00
+        </div>
+    </div>
+
+    <div style="clear: both;"></div>
+
+
+<section id="content" class="m-t-lg wrapper-md animated fadeInDown">
+
+    <div class="row m-n">
+        <div style="margin-left: 15px;">
+            <h2>Теория и практика разработки программных систем</h2>
+            <p>
+                Методологии и процессы разработки программных систем.
+    Роли и артефакты.
+    Матрица ответственностей.
+    Представление слушателей
+            </p>
+        </div>
+    </div>
+
+    <div class="row m-n">
+      <div class="col-lg-8 m-t-lg">
+            <section class="panel panel-tab-radius">
+                <header class="panel-heading tab-bg">
+                  <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#home" data-toggle="tab">День 1</a></li>
+                    <li><a href="#profile" data-toggle="tab">День 2</a></li>
+                    <li><a href="#messages" data-toggle="tab">День 3</a></li>
+                  </ul>
+                </header>
+                <div class="panel-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        <table class="table table-striped m-b-none text-sm">
+                      <thead>
+                        <tr>
+                          <th>Время</th>
+                          <th>Тема</th>
+                          <th>Описание</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            10:00 - 11:30
+                          </td>
+                          <td>Программная инженерия</td>
+                          <td>
+                           Методологии и процессы разработки программных систем. <br/>
+                            Роли и артефакты.<br/>
+                            Матрица ответственностей.<br/>
+                            Представление слушателей <br/>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            11:30 - 12:00
+                          </td>
+                          <td>Введение в UML</td>
+                          <td>
+                            Назначение UML<br/>
+                            Основные сущности и отношения<br/>
+                            Диаграммы<br/>
+                            Представления<br/>
+                            Процесс моделирования<br/>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            11:30 - 12:00
+                          </td>
+                          <td>Перерыв</td>
+                          <td>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            12:00 - 13:30
+                          </td>
+                          <td>Моделирование использование. Теория и поясняющие примеры</td>
+                          <td>
+                            Значение моделирования использования.<br/>
+                            Диаграмма использования. Нотация элементов.<br/>
+                            Примеры построения модели использования, показывающие приемы выделение функциональных требований и способы отображения их на диаграмме использования.<br/>
+                            Обсуждение вариантов реализаций вариантов использования.<br/>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            12:00 - 13:30
+                          </td>
+                          <td>Моделирование использование. Теория и поясняющие примеры</td>
+                          <td>
+                            Значение моделирования использования.<br/>
+                            Диаграмма использования. Нотация элементов.<br/>
+                            Примеры построения модели использования, показывающие приемы выделение функциональных требований и способы отображения их на диаграмме использования.<br/>
+                            Обсуждение вариантов реализаций вариантов использования.<br/>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    </div>
+                    <div class="tab-pane" id="profile">День 2</div>
+                    <div class="tab-pane" id="messages">День 3</div>
+                  </div>
+                </div>
+              </section>
+      </div>
+
+      <div class="col-lg-4 m-t-lg">
+        <section class="panel registration-panel">
+          <h2 style="text-align: center;">Регистрация на мероприятие</h2>
+
+          <form action="/signup" class="panel-body" method="POST">
+            <!-- ФИО -->
+            <div class="form-group {{ check_on_error('firstname') }}">
+                  {{ form.firstname(placeholder="Имя", class="form-control") }}
+            </div>
+
+            <div class="form-group {{ check_on_error('lastname') }}">
+                {{ form.lastname(placeholder="Фамилия", class="form-control") }}
+            </div>
+
+            <div class="form-group">
+
+                {{ form.company(placeholder="Компания", class="form-control") }}
+
+            </div>
+
+            <div class="form-group">
+                 <div class="form-inline {{ check_on_error('position') }}">
+                    {{ form.position(placeholder="Должность", class="form-control") }}
+
+                    {{ form.experience(placeholder="Стаж", class="form-control") }}
+
+                 </div>
+            </div>
+
+            <div class="form-group {{ check_on_error('phone') }}">
+                    {{ form.phone(placeholder="Контактный телефон", class="form-control") }}
+            </div>
+
+
+            <div class="form-group {{ check_on_error('email') }}">
+                    {{ form.email(placeholder="E-mail", class="form-control") }}
+            </div>
+
+            <button type="submit" class="btn btn-info">Зарегистрироваться</button>
+
+{#            <div class="form-group">#}
+{#                <label class="control-label">Введите текст с картинки</label>#}
+{#                {{ form.recaptcha }}#}
+{#            </div>#}
+
+
+          </form>
+        </section>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

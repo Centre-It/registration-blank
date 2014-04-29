@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Регистрация на семинар</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}" type="text/css" cache="false" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/plugin.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" type="text/css" />
+</head>
+<body>
+
+<div style="margin: 0 auto; width: 1000px;">
+{% block content %}
+
+{% endblock %}
+</div>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>
