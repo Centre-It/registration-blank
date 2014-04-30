@@ -4,7 +4,7 @@
 
 <style>
 .col-lg-8 {
-    width: 600px;
+    width: 800px;
 }
 
 .col-lg-4 {
@@ -12,7 +12,7 @@ width: 360px;
 }
 
 .m-n {
-    width: 1000px;
+    width: 1200px;
 }
 
 .registration-panel{
@@ -48,8 +48,14 @@ background-color: #0071bc;
 border-color: #2e3192;
 }
 
-.tab-bg{
+.tab-bg {
+border-radius: 10px 10px 0px 0px;
+background-color: transparent;
+}
 
+.nav-tabs.nav-justified > li > a {
+color: #0071bc;
+text-decoration: underline;
 }
 
 li.active{
@@ -73,6 +79,18 @@ padding: 6px 15px;
 border-top: 1px solid #eaedef;
 }
 
+.panel-heading .nav-tabs > li.active > a, .panel-heading .nav-tabs > li.active > a:hover, .panel-heading .nav-tabs > li.active > a:focus {
+border: 0px;
+}
+
+tr.break > td{
+    background-color: #f2f2f2 !important;
+}
+
+.nav-tabs.nav-justified > li {
+    border-radius: 10px 10px 0 0;
+}
+
 </style>
 
     {% macro check_on_error(field) -%}
@@ -88,7 +106,7 @@ border-top: 1px solid #eaedef;
             <img src="{{ url_for('static', filename="images/cit_logo.png") }}"/>
         </div>
 
-         <div style="width:540px; float: left; text-align: center;">
+         <div style="width:740px; float: left; text-align: center;">
             <p></p>
         </div>
 
