@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}" type="text/css" cache="false" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/plugin.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" type="text/css" />
+
+    {% block css %}
+
+    {% endblock %}
 </head>
 <body>
 

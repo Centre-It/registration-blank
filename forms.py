@@ -9,9 +9,8 @@ from wtforms.validators import required, email
 class SignUpForm(Form):
     lastname = StringField(u'Фамилия', [required()])
     firstname = StringField(u'Имя', [required()])
-    company = StringField(u'Компания')
+    company = StringField(u'Компания', [required()])
     position = StringField(u'Должность', [required()])
-    experience = StringField(u'Опыт')
 
     phone = StringField(u'Контактный телефон', [required()])
     email = StringField(u'Адрес электронной почты', [required(),

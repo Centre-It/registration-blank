@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.col-lg-8 {
+    width: 800px;
+}
+
+.col-lg-4 {
+width: 360px;
+}
+
+.m-n {
+    width: 1200px;
+}
+
+.registration-panel{
+    background-color: #f2f2f2;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0px 3px 5px #b5b5b5;
+}
+
+.status-img{
+    width: 10%;
+    height: 16px;
+    float: right;
+    background-image: url('{{ url_for('static', filename="images/O.png") }}');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 8px;
+}
+
+button.btn.btn-info {
+width: 100%;
+height: 38px;
+background-color: #0071bc;
+border-color: #2e3192;
+}
+
+.tab-bg {
+border-radius: 10px 10px 0px 0px;
+background-color: transparent;
+}
+
+.nav-tabs.nav-justified > li > a {
+color: #0071bc;
+text-decoration: underline;
+}
+
+li.active{
+    background-color: #0071bc;
+}
+
+.panel-heading .nav-tabs > li.active > a,
+.panel-heading .nav-tabs > li.active > a:hover,
+.panel-heading .nav-tabs > li.active > a:focus {
+  color: white;
+  font-weight: 800;
+  background: transparent;
+}
+
+.panel-tab-radius{
+    border-radius: 10px 10px 0px 0px;
+}
+
+.panel .table td, .panel .table th {
+padding: 6px 15px;
+border-top: 1px solid #eaedef;
+}
+
+.panel-heading .nav-tabs > li.active > a, .panel-heading .nav-tabs > li.active > a:hover, .panel-heading .nav-tabs > li.active > a:focus {
+border: 0px;
+}
+
+tr.break > td{
+    background-color: #f2f2f2 !important;
+}
+
+.nav-tabs.nav-justified > li {
+    border-radius: 10px 10px 0 0;
+}
