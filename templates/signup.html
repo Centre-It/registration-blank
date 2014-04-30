@@ -68,6 +68,11 @@ li.active{
     border-radius: 10px 10px 0px 0px;
 }
 
+.panel .table td, .panel .table th {
+padding: 6px 15px;
+border-top: 1px solid #eaedef;
+}
+
 </style>
 
     {% macro check_on_error(field) -%}
@@ -90,7 +95,7 @@ li.active{
          <div style="width:200px; float: left; text-align: right; margin-right: 50px; font-size: 16px; line-height: 24px; font-weight: 800;">
              <span style="color: #39b54a;">Возникли вопросы?</span><br/>
              Симакова Ирина<br/>
-             +7 (000) 000 00 00
+             +7 (912) 288 64 12
         </div>
     </div>
 
@@ -103,10 +108,7 @@ li.active{
         <div style="margin-left: 15px;">
             <h2>Теория и практика разработки программных систем</h2>
             <p>
-                Методологии и процессы разработки программных систем.
-    Роли и артефакты.
-    Матрица ответственностей.
-    Представление слушателей
+
             </p>
         </div>
     </div>
@@ -136,6 +138,8 @@ li.active{
                 </div>
               </section>
       </div>
+
+        {% if not success %}
 
       <div class="col-lg-4 m-t-lg">
         <section class="panel registration-panel">
@@ -186,6 +190,21 @@ li.active{
           </form>
         </section>
       </div>
+
+        {% else %}
+             <div class="col-lg-4 m-t-lg">
+                <section class="panel registration-panel" style="height: 300px;">
+                    <h2 style="text-align: center;">Спасибо за регистрацию</h2>
+
+                    <p style="text-align: center">В ближайшее время с вами свяжутся.</p>
+
+                    <img
+                            style="margin-left: 80px; margin-top: 30px;"
+                            src="{{ url_for('static', filename="images/ok150.png") }}"/>
+                </section>
+            </div>
+
+        {% endif  %}
     </div>
   </section>
 

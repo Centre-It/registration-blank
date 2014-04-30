@@ -19,18 +19,13 @@ def index():
 def singup():
     form = SignUpForm(csrf_enabled=False)
 
+    success = False
     if form.validate_on_submit():
         if not main.process_data(form.data):
             return redirect('/error')
+        success = True
 
-        return redirect('/success')
-
-    return render_template('signup.html', form=form)
-
-
-@app.route('/success')
-def success():
-    return "Ваша заявка принята"
+    return render_template('signup.html', form=form, success=success)
 
 
 @app.route('/error')
