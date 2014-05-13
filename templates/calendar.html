@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename="css/signup.css") }}"/>
+{% endblock %}
+
+{% block content %}
+
+    <section id="content" class="m-t-lg wrapper-md animated fadeInDown">
+
+    <div class="row m-n">
+      <div class="col-lg-8 m-t-lg">
+            <section class="panel panel-tab-radius">
+                <header class="panel-heading tab-bg">
+                  <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#home" data-toggle="tab">День 1</a></li>
+                  </ul>
+                </header>
+                <div class="panel-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        {% include "plan/day1.html" %}
+                    </div>
+                  </div>
+                </div>
+              </section>
+      </div>
+    </div>
+
+
+    <div class="row m-n">
+      <div class="col-lg-8 m-t-lg">
+            <section class="panel panel-tab-radius">
+                <header class="panel-heading tab-bg">
+                  <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#home" data-toggle="tab">День 2</a></li>
+                  </ul>
+                </header>
+                <div class="panel-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        {% include "plan/day2.html" %}
+                    </div>
+                  </div>
+                </div>
+              </section>
+      </div>
+    </div>
+
+    <div class="row m-n">
+      <div class="col-lg-8 m-t-lg">
+            <section class="panel panel-tab-radius">
+                <header class="panel-heading tab-bg">
+                  <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#home" data-toggle="tab">День 3</a></li>
+                  </ul>
+                </header>
+                <div class="panel-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        {% include "plan/day3.html" %}
+                    </div>
+                  </div>
+                </div>
+              </section>
+      </div>
+    </div>
+
+    </section>
+
+
+{% endblock %}

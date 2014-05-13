@@ -27,6 +27,10 @@ def singup():
 
     return render_template('signup.html', form=form, success=success)
 
+@app.route('/calendar')
+def calendar():
+    return render_template('calendar.html')
+
 
 @app.route('/error')
 def error():
